@@ -20,15 +20,15 @@ Vue.component('header-template', {
             <div class="row align-items-center">
                 
                 <div class="col-6 col-xl-2" data-aos="fade-down">
-                <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">Photon</a></h1>
+                <h1 class="mb-0"><router-link :to="getRealPath('/')" class="text-black h2 mb-0">Photon</router-link></h1>
                 </div>
                 <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
                 <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
                     <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><router-link :to="getRealPath('/')">Home</router-link></li>
                     <li class="has-children">
-                        <a href="single.html">Gallery</a>
+                        <router-link :to="getRealPath('/single')">Gallery</router-link>
                         <ul class="dropdown">
                         <li><a href="#">Nature</a></li>
                         <li><a href="#">Portrait</a></li>
@@ -47,9 +47,9 @@ Vue.component('header-template', {
                         </li>
                         </ul>
                     </li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><router-link :to="getRealPath('/services')">Services</router-link></li>
+                    <li><router-link :to="getRealPath('/about')">About</router-link></li>
+                    <li><router-link :to="getRealPath('/contact')">Contact</router-link></li>
                     </ul>
                 </nav>
                 </div>
@@ -81,5 +81,17 @@ Vue.component('header-template', {
             
         </header>
     </div>
-    `
+    `,
+
+    data() {
+        return {
+            Globals
+        }
+    },
+
+    methods: {
+        getRealPath(url) {
+            return `${this.Globals.leadingURL}${url}`;
+        }
+    }
 });

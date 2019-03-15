@@ -1,23 +1,24 @@
 
+
 const routes = [
     {
-        path: '/',
+        path: `${Globals.leadingURL}/`,
         component: Index
     },
     {
-        path: '/about',
+        path: `${Globals.leadingURL}/about`,
         component: About
     },
     {
-        path: '/contact',
+        path: `${Globals.leadingURL}/contact`,
         component: Contact
     },
     {
-        path: '/services',
+        path: `${Globals.leadingURL}/services`,
         component: Services
     },
     {
-        path: '/single',
+        path: `${Globals.leadingURL}/single`,
         component: Single
     },
 ];
@@ -31,4 +32,14 @@ const router = new VueRouter
 const app = new Vue({
     el: '#app',
     router: router,
+
+    data: {
+        Globals
+    },
+
+    methods: {
+        getRealPath(url) {
+            return `${this.Globals.leadingURL}${url}`;
+        },
+    }
 });    

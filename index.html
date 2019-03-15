@@ -31,18 +31,10 @@
     
         <div id="app" class="site-wrap">
             <header-template></header-template>
-
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to="/contact">Contact</router-link>
-            <router-link to="/services">Services</router-link>
-            <router-link to="/single">Single</router-link>
                 
             <!-- content -->
-            <!-- content end -->
-
             <router-view></router-view>
-
+            <!-- content end -->
 
             <footer-template></footer-template>
         </div>
@@ -73,6 +65,9 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
         <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
 
+        <!-- Globals -->
+        <script src="./vue/Globals.js"></script>
+
         <!-- Components -->
         <script src="./vue/templates/HeaderTemplate.js"></script>
         <script src="./vue/templates/FooterTemplate.js"></script>
@@ -87,10 +82,11 @@
         <!-- Main Vue -->
         <script src="./vue/app.js"></script>
         
-        <script>
+        <!-- Commented because already run in mounted of each component -->
+        <!-- <script>
             $(document).ready(function(){
             $('#lightgallery').lightGallery();
             });
-        </script>
+        </script> -->
     </body>
 </html>
