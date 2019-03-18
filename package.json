@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "webpack-watch": "webpack --watch",
+    "webpack-watch": "webpack --watch --progress --hide-modules",
     "webpack": "webpack"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jhynzar/photography-blog#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {
