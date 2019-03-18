@@ -35,7 +35,11 @@ export default {
 
   created() {
     axios.get(`${Globals.apiUrl}/api/collections`)
-      .then(({data}) => this.collections = data);
+      .then(({data}) => {
+        this.collections = data;
+        
+        $('#lightgallery').lightGallery();
+      });
   },
 
   mounted() {
