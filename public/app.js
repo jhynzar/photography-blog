@@ -354,7 +354,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar Globals = {\n  apiUrl: 'http://photography-blog-api.herokuapp.com' //apiUrl: 'http://localhost:5000',\n\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Globals);\n\n//# sourceURL=webpack:///./resources/js/Globals.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar Globals = {\n  apiUrl: 'https://photography-blog-api.herokuapp.com' //apiUrl: 'http://localhost:5000',\n\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Globals);\n\n//# sourceURL=webpack:///./resources/js/Globals.js?");
 
 /***/ }),
 
