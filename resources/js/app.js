@@ -24,10 +24,4 @@ new Vue({
     data: {
         Globals
     },
-
-    methods: {
-        getRealPath(url) {
-            return `${url}`;
-        },
-    }
 });    

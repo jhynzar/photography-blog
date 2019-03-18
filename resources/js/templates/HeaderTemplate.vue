@@ -19,14 +19,14 @@
             <div class="row align-items-center">
                 
                 <div class="col-6 col-xl-2" data-aos="fade-down">
-                <h1 class="mb-0"><router-link :to="getRealPath('/')" exact class="text-black h2 mb-0">Photon</router-link></h1>
+                <h1 class="mb-0"><router-link to="/" exact class="text-black h2 mb-0">Photon</router-link></h1>
                 </div>
                 <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
                 <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
                     <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                    <router-link tag="li" :to="getRealPath('/')" exact><a>Home</a></router-link>
-                    <router-link tag="li" class="has-children" :to="getRealPath('/single')">
+                    <router-link tag="li" to="/" exact><a>Home</a></router-link>
+                    <router-link tag="li" to="/single" class="has-children">
                         <a>Gallery</a>
                         <ul class="dropdown">
                         <li><a href="#">Nature</a></li>
@@ -46,9 +46,9 @@
                         </li>
                         </ul>
                     </router-link>
-                    <router-link tag="li" :to="getRealPath('/services')"><a>Services</a></router-link>
-                    <router-link tag="li" :to="getRealPath('/about')"><a>About</a></router-link>
-                    <router-link tag="li" :to="getRealPath('/contact')"><a>Contact</a></router-link>
+                    <router-link tag="li" to="services"><a>Services</a></router-link>
+                    <router-link tag="li" to="/about)"><a>About</a></router-link>
+                    <router-link tag="li" to="/contact"><a>Contact</a></router-link>
                     </ul>
                 </nav>
                 </div>
@@ -89,11 +89,5 @@ export default {
             Globals
         }
     },
-
-    methods: {
-        getRealPath(url) {
-            return `${url}`;
-        }
-    }
 }
 </script>
