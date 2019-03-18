@@ -19,15 +19,15 @@
             <div class="row align-items-center">
                 
                 <div class="col-6 col-xl-2" data-aos="fade-down">
-                <h1 class="mb-0"><router-link :to="getRealPath('/')" class="text-black h2 mb-0">Photon</router-link></h1>
+                <h1 class="mb-0"><router-link :to="getRealPath('/')" exact class="text-black h2 mb-0">Photon</router-link></h1>
                 </div>
                 <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
                 <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
                     <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                    <li class="active"><router-link :to="getRealPath('/')">Home</router-link></li>
-                    <li class="has-children">
-                        <router-link :to="getRealPath('/single')">Gallery</router-link>
+                    <router-link tag="li" :to="getRealPath('/')" exact><a>Home</a></router-link>
+                    <router-link tag="li" class="has-children" :to="getRealPath('/single')">
+                        <a>Gallery</a>
                         <ul class="dropdown">
                         <li><a href="#">Nature</a></li>
                         <li><a href="#">Portrait</a></li>
@@ -45,10 +45,10 @@
                             </ul>
                         </li>
                         </ul>
-                    </li>
-                    <li><router-link :to="getRealPath('/services')">Services</router-link></li>
-                    <li><router-link :to="getRealPath('/about')">About</router-link></li>
-                    <li><router-link :to="getRealPath('/contact')">Contact</router-link></li>
+                    </router-link>
+                    <router-link tag="li" :to="getRealPath('/services')"><a>Services</a></router-link>
+                    <router-link tag="li" :to="getRealPath('/about')"><a>About</a></router-link>
+                    <router-link tag="li" :to="getRealPath('/contact')"><a>Contact</a></router-link>
                     </ul>
                 </nav>
                 </div>
