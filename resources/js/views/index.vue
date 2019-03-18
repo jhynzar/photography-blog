@@ -8,7 +8,7 @@
                   <h2 class="mb-3">Nature</h2>
                   <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
                   </div>
-                  <img src="images/img_1.jpg" alt="Image">
+                  <img src="./public/images/img_1.jpg" alt="Image">
               </div>
               </div>
               <div class="swiper-slide">
@@ -17,7 +17,7 @@
                   <h2 class="mb-3">Portrait</h2>
                   <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
                   </div>
-                  <img src="images/img_2.jpg" alt="Image">
+                  <img src="./public/images/img_2.jpg" alt="Image">
               </div>
               </div>
               <div class="swiper-slide">
@@ -26,7 +26,7 @@
                   <h2 class="mb-3">People</h2>
                   <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
                   </div>
-                  <img src="images/img_3.jpg" alt="Image">
+                  <img src="./public/images/img_3.jpg" alt="Image">
               </div>
               </div>
               <div class="swiper-slide">
@@ -35,7 +35,7 @@
                   <h2 class="mb-3">Architecture</h2>
                   <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
                   </div>
-                  <img src="images/img_4.jpg" alt="Image">
+                  <img src="./public/images/img_4.jpg" alt="Image">
               </div>
               </div>
               <div class="swiper-slide">
@@ -44,7 +44,7 @@
                   <h2 class="mb-3">Animals</h2>
                   <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
                   </div>
-                  <img src="images/img_5.jpg" alt="Image">
+                  <img src="./public/images/img_5.jpg" alt="Image">
               </div>
               </div>
               <div class="swiper-slide">
@@ -53,7 +53,7 @@
                   <h2 class="mb-3">Sports</h2>
                   <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
                   </div>
-                  <img src="images/img_6.jpg" alt="Image">
+                  <img src="./public/images/img_6.jpg" alt="Image">
               </div>
               </div>
               <div class="swiper-slide">
@@ -62,7 +62,7 @@
                   <h2 class="mb-3">Travel</h2>
                   <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
                   </div>
-                  <img src="images/img_7.jpg" alt="Image">
+                  <img src="./public/images/img_7.jpg" alt="Image">
               </div>
               </div>
           </div>
