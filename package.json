@@ -1,0 +1,35 @@
+{
+  "name": "photography-blog",
+  "version": "1.0.0",
+  "description": "Photography Blog",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "webpack-watch": "webpack --watch",
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhynzar/photography-blog.git"
+  },
+  "author": "Mj Tapiru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhynzar/photography-blog/issues"
+  },
+  "homepage": "https://github.com/jhynzar/photography-blog#readme",
+  "dependencies": {
+    "vue-router": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "vue": "^2.6.9",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.9",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}

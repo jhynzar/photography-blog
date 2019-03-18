@@ -1,5 +1,4 @@
-Vue.component('header-template', {
-    template: `
+<template>
     <div>
 
         <div class="site-mobile-menu">
@@ -81,8 +80,10 @@ Vue.component('header-template', {
             
         </header>
     </div>
-    `,
+</template>
 
+<script>
+export default {
     data() {
         return {
             Globals
@@ -91,7 +92,8 @@ Vue.component('header-template', {
 
     methods: {
         getRealPath(url) {
-            return `${this.Globals.leadingURL}${url}`;
+            return `${url}`;
         }
     }
-});
+}
+</script>
