@@ -29,20 +29,8 @@
                     <router-link tag="li" to="/single" class="has-children">
                         <a>Gallery</a>
                         <ul class="dropdown">
-                        <li><a href="#">Nature</a></li>
-                        <li><a href="#">Portrait</a></li>
-                        <li><a href="#">People</a></li>
-                        <li><a href="#">Architecture</a></li>
-                        <li><a href="#">Animals</a></li>
-                        <li><a href="#">Sports</a></li>
-                        <li><a href="#">Travel</a></li>
-                        <li class="has-children">
-                            <a href="#">Sub Menu</a>
-                            <ul class="dropdown">
-                            <li><a href="#">Menu One</a></li>
-                            <li><a href="#">Menu Two</a></li>
-                            <li><a href="#">Menu Three</a></li>
-                            </ul>
+                        <li v-for="(collection, index) in collections" :key="index">
+                            <router-link :to="collection.link">{{collection.title}}</router-link>
                         </li>
                         </ul>
                     </router-link>
@@ -86,8 +74,18 @@
 export default {
     data() {
         return {
-            Globals
+            Globals,
+            collections: []
         }
     },
+
+    created() {
+        axios.get(`${this.Globals.apiUrl}/api/collections`)
+            .then(({data}) => {
+                this.collections = data;
+
+                Globals.template.initialize();
+            });
+    }
 }
 </script>

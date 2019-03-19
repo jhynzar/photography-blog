@@ -29,12 +29,13 @@ export default {
 
   data() {
     return {
+      Globals,
       collections: []
     }
   },
 
   created() {
-    axios.get(`${Globals.apiUrl}/api/collections`)
+    axios.get(`${this.Globals.apiUrl}/api/collections`)
       .then(({data}) => {
         this.collections = data;
 
