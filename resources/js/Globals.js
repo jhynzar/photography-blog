@@ -299,7 +299,9 @@ let Globals = {
            
            });
 
-           $('#lightgallery').lightGallery();
+            $(document).ready(function(){
+                $('#lightgallery').lightGallery();
+            });
         }
     }
 }

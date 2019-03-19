@@ -19,8 +19,8 @@ const routes = [
         component: require('./views/services.vue').default
     },
     {
-        path: `/single`,
-        component: require('./views/single.vue').default
+        path: `/collections/:collection`,
+        component: require('./views/gallery.vue').default
     },
 ];
 

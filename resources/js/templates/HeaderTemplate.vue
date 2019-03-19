@@ -30,7 +30,7 @@
                         <a>Gallery</a>
                         <ul class="dropdown">
                         <li v-for="(collection, index) in collections" :key="index">
-                            <router-link :to="collection.link">{{collection.title}}</router-link>
+                            <router-link :to="`/collections/${collection.link}`">{{collection.title}}</router-link>
                         </li>
                         </ul>
                     </router-link>

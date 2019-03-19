@@ -3,7 +3,7 @@
         <div class="image-wrap">
             <div class="image-info">
                 <h2 class="mb-3">{{ this.title }}</h2>
-                <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                <router-link :to="`/collections/${link}`" class="btn btn-outline-white py-2 px-4">More Photos</router-link>
             </div>
             <img :src="fullImgPath" :alt="coverImg">
         </div>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    props: ['title', 'coverImg', 'coverImgPath'],
+    props: ['title', 'coverImg', 'coverImgPath', 'link'],
 
     data() {
         return {
