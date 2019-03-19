@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    props: ['title', 'coverImg', 'imgPath'],
+    props: ['title', 'coverImg', 'coverImgPath'],
 
     data() {
         return {
@@ -22,7 +22,7 @@ export default {
 
     computed: {
         fullImgPath() {
-            return `${this.Globals.apiUrl}${this.imgPath}`
+            return `${this.Globals.apiUrl}${this.coverImgPath}`
         }
     }
 }

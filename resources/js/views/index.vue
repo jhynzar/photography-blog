@@ -7,7 +7,7 @@
               :key="index" 
               :title="collection.title" 
               :coverImg="collection.coverImg" 
-              :imgPath="collection.imgPath"></collection>
+              :coverImgPath="collection.coverImgPath"></collection>
           </div>
 
           <div class="swiper-pagination"></div>
