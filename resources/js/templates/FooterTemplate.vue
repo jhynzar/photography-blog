@@ -16,6 +16,12 @@ export default {
         getCurrentYear() {
             return new Date().getFullYear();
         }
+    },
+
+    mounted() {
+
+        //run when all initialization is done
+        this.$emit('initialized','footerTemplate');
     }
 }
 </script>

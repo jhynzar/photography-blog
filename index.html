@@ -30,13 +30,13 @@
     <body>
     
         <div id="app" class="site-wrap">
-            <header-template></header-template>
+            <header-template @initialized="onComponentInitialized"></header-template>
                 
             <!-- content -->
-            <router-view></router-view>
+            <router-view @initialized="onComponentInitialized"></router-view>
             <!-- content end -->
 
-            <footer-template></footer-template>
+            <footer-template @initialized="onComponentInitialized"></footer-template>
         </div>
 
         <!-- Template Dedicated Imports -->

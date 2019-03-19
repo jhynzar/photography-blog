@@ -24,6 +24,30 @@ new Vue({
     },
 
     data: {
-        Globals
+        Globals,
+        isInitialized: {
+            headerTemplate: false,
+            routerView: false,
+            footerTemplate: false
+        }
     },
+
+    methods: {
+        onComponentInitialized(componentName) {
+            this.isInitialized[componentName] = true;
+
+            this.checkInitializationProgress();
+        },
+
+        checkInitializationProgress() {
+            for (let component in this.isInitialized) {
+                if(this.isInitialized[component] === false) {
+                    return false;
+                }
+            }
+
+            //if all are already initialized(true), run initialize method.
+            this.Globals.template.initialize();
+        }
+    }
 });    

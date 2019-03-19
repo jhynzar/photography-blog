@@ -79,12 +79,13 @@ export default {
         }
     },
 
-    created() {
+    mounted() {
         axios.get(`${this.Globals.apiUrl}/api/collections`)
             .then(({data}) => {
                 this.collections = data;
 
-                Globals.template.initialize();
+                //run when all initialization is done
+                this.$emit('initialized','headerTemplate');
             });
     }
 }
