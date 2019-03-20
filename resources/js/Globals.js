@@ -253,6 +253,10 @@ let Globals = {
         
             var swiperSetting = function() {
                 var mySwiper = new Swiper ('.swiper-container', {
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
                 // Optional parameters
                 // direction: 'horizontal',
                 // loop: true,
@@ -304,9 +308,17 @@ let Globals = {
                     // mousewheelControl: true
         
                 })
+
+                /**
+                 * PATCH, to enable mousewheel scrolling on mySwiper Immediately
+                 * without the need to leave and enter the mySwiper area after route mount
+                 */
+                if(mySwiper.mousewheel !== undefined) {
+                    mySwiper.mousewheel.handleMouseEnter();
+                }
             }
             swiperSetting();
-           
+
            });
 
            this.refreshLightGallery();
