@@ -323,7 +323,6 @@ let Globals = {
 
            this.refreshLightGallery();
 
-            console.log('Gloabals.initialize');
         },
 
 

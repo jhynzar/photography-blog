@@ -59,8 +59,6 @@
                     //run when all initialization is done
                     this.$emit('initialized','routerView');
                 });
-
-                console.log(this.collection);
             }
         }
     }
