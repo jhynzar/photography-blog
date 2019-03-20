@@ -1,7 +1,17 @@
 let Globals = {
+    /**
+     * Globals
+     */
     apiUrl: 'https://photography-blog-api.herokuapp.com',
     //apiUrl: 'http://localhost:5000',
+    /**
+     * Globals end
+     */
 
+
+    /**
+     * Template
+     */
     template: {
         initialize() {
             AOS.init({
@@ -299,11 +309,24 @@ let Globals = {
            
            });
 
+           this.refreshLightGallery();
+
+            console.log('Gloabals.initialize');
+        },
+
+
+        refreshLightGallery() {
             $(document).ready(function(){
-                $('#lightgallery').lightGallery();
+                lightGallery(document.getElementById('lightgallery'), {
+                    thumbnail: true,
+                    googlePlus: false,
+                });
             });
         }
     }
+    /**
+     * template end
+     */
 }
 
 export default Globals;
