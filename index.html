@@ -25,6 +25,29 @@
         <link rel="stylesheet" href="public/css/aos.css">
 
         <link rel="stylesheet" href="public/css/style.css">
+
+        <!-- FACEBOOK API -->
+        <script>
+            window.fbAsyncInit = function() {
+              FB.init({
+                appId            : '580499089083300',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v2.10'
+              });
+              FB.AppEvents.logPageView();
+            };
+           
+            (function(d, s, id){
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) {return;}
+               js = d.createElement(s); js.id = id;
+               js.src = "//connect.facebook.net/en_US/sdk.js";
+               fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <!-- FACEBOOK API END -->
+
         
     </head>
     <body>
@@ -38,6 +61,8 @@
 
             <footer-template @initialized="onComponentInitialized"></footer-template>
         </div>
+
+        
 
         <!-- Template Dedicated Imports -->
         <script src="public/js/jquery-3.3.1.min.js"></script>

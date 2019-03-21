@@ -44,6 +44,29 @@ let Globals = {
         }
     },
 
+    /**
+     * FACEBOOK API Methods
+     */
+    facebook: {
+        shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage) {
+            FB.ui({
+                method: 'share_open_graph',
+                action_type: 'og.likes',
+                action_properties: JSON.stringify({
+                    object: {
+                        'og:url': overrideLink,
+                        'og:title': overrideTitle,
+                        'og:description': overrideDescription,
+                        'og:image': overrideImage
+                    }
+                })
+            },
+            function (response) {
+            // Action after response
+            });
+        }
+    },
+
 
     /**
      * Template

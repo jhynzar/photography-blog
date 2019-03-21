@@ -59,8 +59,16 @@
             $('body').on('click', '#lg-share-facebook, #lg-share-twitter, #lg-share-pinterest', (e) => {
                 e.preventDefault();
                 console.log('click share');
+                console.log(e.currentTarget);
 
-                this.Globals.customMethods.openNewWindow(e.currentTarget.href, null, 0.5 , 0.3);
+                let details = $('.lg-sub-html');
+                let imageLink = $('#lg-download').prop('href');
+
+                console.log(imageLink);
+
+                this.Globals.facebook.shareOverrideOGMeta(window.location.href, details.find('h4'), details.find('p'), imageLink);
+
+                //this.Globals.customMethods.openNewWindow(e.currentTarget.href, null, 0.5 , 0.3);
             });
         },
 
