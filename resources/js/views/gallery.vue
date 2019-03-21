@@ -66,7 +66,7 @@
 
                 console.log(imageLink);
 
-                this.Globals.facebook.shareOverrideOGMeta(window.location.href, details.find('h4'), details.find('p'), imageLink);
+                shareOverrideOGMeta(window.location.href, details.find('h4'), details.find('p'), imageLink);
 
                 //this.Globals.customMethods.openNewWindow(e.currentTarget.href, null, 0.5 , 0.3);
             });
