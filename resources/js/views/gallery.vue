@@ -52,7 +52,7 @@
             '$route.params.collection': 'getCollectionData'
         },
 
-        mounted() {
+        created() {
             this.getCollectionData();
 
             //delegated on click, so only run once, no need to refresh

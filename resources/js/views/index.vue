@@ -35,7 +35,7 @@ export default {
     }
   },
 
-  mounted() {
+  created() {
     axios.get(`${this.Globals.apiUrl}/api/collections`)
       .then(({data}) => {
         this.collections = data;

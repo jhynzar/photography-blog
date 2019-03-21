@@ -70,10 +70,10 @@
 
 <script>
 export default {
-  mounted() {
+    created() {
 
-      //run when all initialization is done
-      this.$emit('initialized','routerView');
-  }
+        //run when all initialization is done
+        this.$emit('initialized','routerView');
+    }
 }
 </script>
