@@ -42,6 +42,12 @@
             }
         },
 
+        metaInfo() {
+            return {
+                meta: this.getFBMetaInfos
+            }
+        },
+
         watch: {
             '$route': 'getCollectionData'
         },
@@ -59,6 +65,44 @@
                     //run when all initialization is done
                     this.$emit('initialized','routerView');
                 });
+            }
+        },
+
+        computed: {
+            getFBMetaInfos() {
+                let metaInfos = [
+                    {
+                        property: 'og:url',
+                        content: window.location.href
+                    },
+                    {
+                        property: 'og:type',
+                        content: 'article'
+                    },
+                    {
+                        property: 'og:title',
+                        content: `'${this.collection.title}' Gallery`
+                    },
+                    {
+                        property: 'og:description',
+                        content: `'${this.collection.description}' Gallery description`
+                    },
+                ];
+
+
+                //Gallery images
+                for (const key in this.collection.gallery) {
+                    if (this.collection.gallery.hasOwnProperty(key)) {
+                        const element = this.collection.gallery[key];
+                        let metaInfo = {};
+                        metaInfo.property = 'og:image';
+                        metaInfo.content = `${this.Globals.apiUrl}${element.imgPath}`;
+
+                        metaInfos.push(metaInfo);
+                    }
+                }
+
+                return metaInfos;
             }
         }
     }
