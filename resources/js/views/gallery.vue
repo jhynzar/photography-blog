@@ -70,6 +70,7 @@
 
         computed: {
             getFBMetaInfos() {
+                console.log('get fb');
                 let metaInfos = [
                     {
                         property: 'og:url',
