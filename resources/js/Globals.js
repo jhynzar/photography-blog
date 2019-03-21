@@ -366,7 +366,8 @@ let Globals = {
             $(document).ready(function(){
                 lightGallery(document.getElementById('lightgallery'), {
                     thumbnail: true,
-                    googlePlus: false,
+                    googlePlus: false, //Google plus is deleted
+                    twitter: false, //does not accept two hash('#') parameters
                 });
             });
         }
