@@ -54,7 +54,10 @@
     
             // Change hash value on after each slide transition
             utils.on(_this.core.el, 'onAfterSlide.lgtm', function (event) {
-                window.location.hash = 'lg=' + _this.core.s.galleryId + '&slide=' + event.detail.index;
+                //Remove oldHash of gallery slide first
+                _this.oldHash = _this.oldHash.replace(/#lg=.+&slide=.+/, '');
+
+                window.location.hash = ( _this.oldHash + '#' ) +'lg=' + _this.core.s.galleryId + '&slide=' + event.detail.index;
             });
     
             // Listen hash change and change the slide according to slide value
@@ -81,9 +84,9 @@
                 window.location.hash = this.oldHash;
             } else {
                 if (history.pushState) {
-                    history.pushState('', document.title, window.location.pathname + window.location.search);
+                    history.pushState('', document.title, window.location.pathname + this.oldHash + window.location.search);
                 } else {
-                    window.location.hash = '';
+                    window.location.hash = this.oldHash || '';
                 }
             }
     
