@@ -49,11 +49,19 @@
         },
 
         watch: {
-            '$route': 'getCollectionData'
+            '$route.params.collection': 'getCollectionData'
         },
 
         mounted() {
             this.getCollectionData();
+
+            //delegated on click, so only run once, no need to refresh
+            $('body').on('click', '#lg-share-facebook, #lg-share-twitter, #lg-share-pinterest', (e) => {
+                e.preventDefault();
+                console.log('click share');
+
+                this.Globals.customMethods.openNewWindow(e.currentTarget.href, null, 0.5 , 0.3);
+            });
         },
 
         methods: {

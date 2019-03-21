@@ -8,6 +8,42 @@ let Globals = {
      * Globals end
      */
 
+     /**
+      * Custom Methods
+      */
+    customMethods: {
+        openNewWindow(url = '_blank', title = 'Blank Page', heightPercentage =  0.5, widthPercentage = 0.3 , selectedMode = 'default') {
+
+            var iNewWindowHeight = (screen.height * heightPercentage);
+            var iNewWindowWidth = (screen.width * widthPercentage);
+
+            var modes = {
+                'default': {
+                    left: 25,
+                    top: 100
+                },
+                'centered': {
+                    left: (screen.height - iNewWindowHeight) / 2,
+                    top: (screen.width - iNewWindowWidth) / 2 
+                }
+            };
+
+            var mode = modes[selectedMode];
+
+            console.log(mode);
+            
+            
+            var aWindowFeatures = [
+                'top=' + mode.left,
+                'left=' + mode.height,
+                'height=' + iNewWindowHeight,
+                'width=' + iNewWindowWidth,
+            ];
+            
+            window.open(url, title, aWindowFeatures.join(','));
+        }
+    },
+
 
     /**
      * Template
