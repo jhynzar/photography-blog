@@ -49,29 +49,7 @@
         created() {
             this.getCollectionData();
 
-            /**
-             * FACEBOOK SHARE
-             */
-            $('body').on('click', '#lg-share-facebook', (e) => {
-                e.preventDefault();
-                console.log('click share');
-                console.log(e.currentTarget);
-
-                let url = e.currentTarget.href;
-                let details = $('.lg-sub-html');
-                let imageLink = $('#lg-download').prop('href');
-
-                console.log(imageLink);
-
-                VueEventListener.$emit('facebookShare', {
-                    url,
-                    title: details.find('h4'),
-                    description: details.find('p'),
-                    image: imageLink
-                });
-
-                //this.Globals.customMethods.openNewWindow(e.currentTarget.href, null, 0.5 , 0.3);
-            });
+            
 
             /**
              * lightgallery.js Sharer
