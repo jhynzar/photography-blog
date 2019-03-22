@@ -29,9 +29,6 @@ let Globals = {
             };
 
             var mode = modes[selectedMode];
-
-            console.log(mode);
-            
             
             var aWindowFeatures = [
                 'top=' + mode.left,

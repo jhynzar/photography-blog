@@ -55,7 +55,7 @@
              * lightgallery.js Sharer
              */
             //delegated on click, so only run once, no need to refresh
-            $('body').on('click', '#lg-share-twitter, #lg-share-pinterest', (e) => {
+            $('body').on('click', '#lg-share-facebook, #lg-share-twitter, #lg-share-pinterest', (e) => {
                 e.preventDefault();
 
                 let details = $('.lg-sub-html');

@@ -4,25 +4,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Axios from 'axios';
 
-window.VueEventListener = new Vue();
-/**
-             * FACEBOOK SHARE
-             */
-            $('body').on('click', '#lg-share-facebook', (e) => {
-                e.preventDefault();
-                console.log('click share');
-                console.log(e.currentTarget);
-
-                let url = e.currentTarget.href;
-                let details = $('.lg-sub-html');
-                let imageLink = $('#lg-download').prop('href');
-
-                console.log(imageLink);
-
-                facebookShareOverrideOGMeta( url, details.find('h4'), details.find('p'), imageLink);
-
-                //this.Globals.customMethods.openNewWindow(e.currentTarget.href, null, 0.5 , 0.3);
-            });
 window.Globals = Globals;
 window.axios = Axios;
 Vue.use(VueRouter);
