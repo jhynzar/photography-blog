@@ -26,14 +26,14 @@
 
                     <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                     <router-link tag="li" to="/" exact><a>Home</a></router-link>
-                    <router-link tag="li" to="/single" class="has-children">
+                    <li class="has-children">
                         <a>Gallery</a>
                         <ul class="dropdown">
                         <li v-for="(collection, index) in collections" :key="index">
                             <router-link :to="`/collections/${collection.link}`">{{collection.title}}</router-link>
                         </li>
                         </ul>
-                    </router-link>
+                    </li>
                     <router-link tag="li" to="/services"><a>Services</a></router-link>
                     <router-link tag="li" to="/about"><a>About</a></router-link>
                     <router-link tag="li" to="/contact"><a>Contact</a></router-link>
