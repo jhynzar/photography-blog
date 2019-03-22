@@ -55,8 +55,10 @@
         created() {
             this.getCollectionData();
 
-            //delegated on click, so only run once, no need to refresh
-            $('body').on('click', '#lg-share-facebook, #lg-share-twitter, #lg-share-pinterest', (e) => {
+            /**
+             * FACEBOOK SHARE
+             */
+            $('body').on('click', '#lg-share-facebook', (e) => {
                 e.preventDefault();
                 console.log('click share');
                 console.log(e.currentTarget);
@@ -66,9 +68,27 @@
 
                 console.log(imageLink);
 
-                shareOverrideOGMeta(window.location.href, details.find('h4'), details.find('p'), imageLink);
+                VueEventListener.$emit('facebookShare', {
+                    url: window.location.href,
+                    title: details.find('h4'),
+                    description: details.find('p'),
+                    image: imageLink
+                });
 
                 //this.Globals.customMethods.openNewWindow(e.currentTarget.href, null, 0.5 , 0.3);
+            });
+
+            /**
+             * lightgallery.js Sharer
+             */
+            //delegated on click, so only run once, no need to refresh
+            $('body').on('click', '#lg-share-twitter, #lg-share-pinterest', (e) => {
+                e.preventDefault();
+
+                let details = $('.lg-sub-html');
+                let imageLink = $('#lg-download').prop('href');
+
+                this.Globals.customMethods.openNewWindow(e.currentTarget.href, null, 0.5 , 0.3);
             });
         },
 

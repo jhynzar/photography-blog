@@ -5,10 +5,12 @@ import VueRouter from 'vue-router';
 import VueMeta from 'vue-meta';
 import Axios from 'axios';
 
+window.VueEventListener = new Vue();
 window.Globals = Globals;
 window.axios = Axios;
 Vue.use(VueRouter);
 Vue.use(VueMeta);
+
 
 // /**
 //  * Components
@@ -35,6 +37,12 @@ new Vue({
         }
     },
 
+    mounted() {
+        VueEventListener.$on('facebookShare', (options) => {
+            facebookShareOverrideOGMeta(options.url, options.title, options.description, options.image);
+        });
+    },
+
     methods: {
         onComponentInitialized(componentName) {
             this.isInitialized[componentName] = true;
@@ -51,6 +59,6 @@ new Vue({
 
             //if all are already initialized(true), run initialize method.
             this.Globals.template.initialize();
-        }
+        },
     }
 });    
