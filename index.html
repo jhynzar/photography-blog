@@ -36,7 +36,7 @@
                 version          : 'v2.10'
               });
               FB.AppEvents.logPageView();
-              shareOverrideOGMeta('https://www.google.com','article','Google','description','https://via.placeholder.com/360');
+              shareOverrideOGMeta('https://www.google.com','og.likes','Google','description','https://via.placeholder.com/360');
             };
            
             (function(d, s, id){
@@ -53,11 +53,10 @@
             {
                 FB.ui({
                     method: 'share_open_graph',
-                    action_type: 'og.likes',
+                    action_type: overrrideType,
                     action_properties: JSON.stringify({
                         object: {
                             'og:url': overrideLink,
-                            'og:type': overrrideType,
                             'og:title': overrideTitle,
                             'og:description': overrideDescription,
                             'og:image': overrideImage
