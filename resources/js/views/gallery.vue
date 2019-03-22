@@ -42,12 +42,6 @@
             }
         },
 
-        metaInfo() {
-            return {
-                meta: this.getFBMetaInfos
-            }
-        },
-
         watch: {
             '$route.params.collection': 'getCollectionData'
         },
@@ -103,44 +97,5 @@
                 });
             }
         },
-
-        computed: {
-            getFBMetaInfos() {
-                console.log('get fb');
-                let metaInfos = [
-                    {
-                        property: 'og:url',
-                        content: window.location.href
-                    },
-                    {
-                        property: 'og:type',
-                        content: 'article'
-                    },
-                    {
-                        property: 'og:title',
-                        content: `'${this.collection.title}' Gallery`
-                    },
-                    {
-                        property: 'og:description',
-                        content: `'${this.collection.description}' Gallery description`
-                    },
-                ];
-
-
-                //Gallery images
-                for (const key in this.collection.gallery) {
-                    if (this.collection.gallery.hasOwnProperty(key)) {
-                        const element = this.collection.gallery[key];
-                        let metaInfo = {};
-                        metaInfo.property = 'og:image';
-                        metaInfo.content = `${this.Globals.apiUrl}${element.imgPath}`;
-
-                        metaInfos.push(metaInfo);
-                    }
-                }
-
-                return metaInfos;
-            }
-        }
     }
 </script>

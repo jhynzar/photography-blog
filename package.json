@@ -20,7 +20,6 @@
   "homepage": "https://github.com/jhynzar/photography-blog#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "vue-meta": "^1.5.8",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {

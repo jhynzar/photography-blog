@@ -2,14 +2,12 @@
 import Globals from './Globals';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import VueMeta from 'vue-meta';
 import Axios from 'axios';
 
 window.VueEventListener = new Vue();
 window.Globals = Globals;
 window.axios = Axios;
 Vue.use(VueRouter);
-Vue.use(VueMeta);
 
 
 // /**
