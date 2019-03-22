@@ -57,13 +57,14 @@
                 console.log('click share');
                 console.log(e.currentTarget);
 
+                let url = e.currentTarget.href;
                 let details = $('.lg-sub-html');
                 let imageLink = $('#lg-download').prop('href');
 
                 console.log(imageLink);
 
                 VueEventListener.$emit('facebookShare', {
-                    url: window.location.href,
+                    url,
                     title: details.find('h4'),
                     description: details.find('p'),
                     image: imageLink
