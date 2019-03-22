@@ -5,6 +5,9 @@ import VueRouter from 'vue-router';
 import Axios from 'axios';
 
 window.VueEventListener = new Vue();
+VueEventListener.$on('facebookShare', (options) => {
+    facebookShareOverrideOGMeta(options.url, options.title, options.description, options.image);
+});
 window.Globals = Globals;
 window.axios = Axios;
 Vue.use(VueRouter);
@@ -36,9 +39,7 @@ new Vue({
     },
 
     mounted() {
-        VueEventListener.$on('facebookShare', (options) => {
-            facebookShareOverrideOGMeta(options.url, options.title, options.description, options.image);
-        });
+        
     },
 
     methods: {
