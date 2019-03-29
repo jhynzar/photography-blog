@@ -13,7 +13,7 @@
               </div>
           
           </div>
-          <div class="row" id="lightgallery">
+          <div class="row py-4 d-flex" id="lightgallery" style="background-color: #353535;">
               <gallery-image 
                 v-for="(galleryImg, index) in collection.gallery" 
                 :key="index"
