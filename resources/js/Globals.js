@@ -286,6 +286,14 @@ let Globals = {
         
             var swiperSetting = function() {
                 var mySwiper = new Swiper ('.swiper-container', {
+                /**
+                 * For Preloading
+                 */
+                preloadImages: false, //Disable preloading of all images
+                lazy: true, //Enable lazy loading
+
+
+
                 autoplay: {
                     delay: 2000,
                     disableOnInteraction: false,
@@ -339,6 +347,7 @@ let Globals = {
                     // freeMode: true,
                     // grabCursor: true,
                     // mousewheelControl: true
+                    watchSlidesVisibility: true, //For preloading
         
                 })
 
