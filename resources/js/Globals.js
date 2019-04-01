@@ -295,7 +295,7 @@ let Globals = {
 
 
                 autoplay: {
-                    delay: 2000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 },
                 // Optional parameters
