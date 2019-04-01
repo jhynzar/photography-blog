@@ -43,7 +43,7 @@
 
                 <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
                 <div class="d-none d-xl-inline-block">
-                    <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
+                    <!-- <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                     <li>
                         <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
                     </li>
@@ -56,7 +56,7 @@
                     <li>
                         <a href="#" class="pl-3 pr-3"><span class="icon-youtube-play"></span></a>
                     </li>
-                    </ul>
+                    </ul> -->
                 </div>
 
                 <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
