@@ -27,7 +27,7 @@ new Vue({
 
     data: {
         Globals,
-        isInitialized: {
+        componentsToCheckInitialization: {
             headerTemplate: false,
             routerView: false,
             footerTemplate: false
@@ -40,20 +40,24 @@ new Vue({
 
     methods: {
         onComponentInitialized(componentName) {
-            this.isInitialized[componentName] = true;
+            this.componentsToCheckInitialization[componentName] = true;
 
-            this.checkInitializationProgress();
+            if(this.isComponentsInitialized === true) {
+                //if all are already initialized(true), run initialize method.
+                this.Globals.template.initialize();
+            }
         },
+    },
 
-        checkInitializationProgress() {
-            for (let component in this.isInitialized) {
-                if(this.isInitialized[component] === false) {
+    computed: {
+        isComponentsInitialized(){
+            for (let component in this.componentsToCheckInitialization) {
+                if(this.componentsToCheckInitialization[component] === false) {
                     return false;
                 }
             }
 
-            //if all are already initialized(true), run initialize method.
-            this.Globals.template.initialize();
-        },
+            return true;
+        }
     }
 });    

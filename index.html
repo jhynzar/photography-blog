@@ -40,6 +40,11 @@
     <body>
     
         <div id="app" class="site-wrap">
+            <!-- LOADER -->
+            <div class="swiper-lazy-preloader" v-show="! isComponentsInitialized"></div>
+            <!-- LOADER END -->
+
+
             <header-template @initialized="onComponentInitialized"></header-template>
                 
             <!-- content -->
